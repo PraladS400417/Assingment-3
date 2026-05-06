@@ -6,7 +6,6 @@ from PIL import Image, ImageTk
 import random
 import os
 
-
 class DifferenceRegion:
     def __init__(self, x, y, width, height, alteration_type):
         self.x = x
@@ -409,22 +408,6 @@ class SpotTheDifferenceApp(tk.Tk):
         self.mistakes_var.set(f"Mistakes: {self.state.mistakes} / {GameState.MAX_MISTAKES}")
         self.remaining_var.set(f"Remaining: {self.state.remaining()}")
         self.score_var.set(f"Score: {self.state.total_score}")
-
-
-def main():
-    try:
-        app = SpotTheDifferenceApp()
-        app.geometry("1100x700")
-        app.mainloop()
-    except Exception as e:
-        print(f"Fatal error: {e}")
-        raise
-
-
-if __name__ == "__main__":
-    main()
-
-
 
 class GameState:
     MAX_MISTAKES = 3
