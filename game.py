@@ -413,7 +413,7 @@ def main():
     try:
         app = SpotTheDifferenceApp()
         app.geometry("1100x700")
-        app.mainloop()s
+        app.mainloop()
     except Exception as e:
         print(f"Fatal error: {e}")
         raise
